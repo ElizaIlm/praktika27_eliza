@@ -7,27 +7,34 @@
       xmlns:local="clr-namespace:praktika27e.View"
       mc:Ignorable="d" 
        d:DesignHeight="450" d:DesignWidth="800" FontFamily="Century Gothic"
-  Title="Main">
+      Title="Main">
     <Page.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="#FF4FC318"/>
-            <Setter Property="BorderBrush" Value="#FF4FC318"/>
-            <Setter Property="Foreground" Value="white"/>
-
+        <Style TargetType="Button" x:Key="Update">
+            <Setter Property="Background" Value="#FF2DD61B"/>
+            <Setter Property="BorderBrush" Value="#FF2DD61B"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
     </Page.Resources>
-    <Grid>
-        <ListView ItemsSource="{Binding Items}" HorizontalContentAlignment="Stretch" Margin="0,0,0,40">
+   <Grid>
+        <ListView ItemsSource="{Binding Tasks}" HorizontalContentAlignment="Stretch" Margin="0,0,0,45">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <element:Item DataContext="{Binding}"/>
+                    <elements:Item DataContext="{Binding}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Content="Добавить" Width="100" Height="25" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Command="{Binding NewItem}">
-            <Button.Effect>
-                <DropShadowEffect Direction="270" BlurRadius="5" ShadowDepth="2" Opacity="0.5"/>
-            </Button.Effect>
-        </Button>
-    </Grid>
+        <Button Style="{StaticResource Update}"
+        Command="{Binding OnAddTask}"
+        Content="Добавить"
+        Height="25"
+        Width="70"
+        VerticalAlignment="Bottom"
+        HorizontalAlignment="Right"
+        Margin="0,0,10,10"
+        Grid.Column="1">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5" BlurRadius="3" ShadowDepth="3"></DropShadowEffect>
+                </Button.Effect>
+            </Button>
+   </Grid>
 </Page>
