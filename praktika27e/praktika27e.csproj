@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\ic-task.png" />
     <None Remove="Images\icon.png" />
   </ItemGroup>
 
@@ -15,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\ic-task.png" />
     <Resource Include="Images\icon.png" />
   </ItemGroup>
 

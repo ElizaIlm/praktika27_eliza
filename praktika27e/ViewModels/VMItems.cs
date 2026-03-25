@@ -23,8 +23,11 @@ namespace praktika27e.ViewModell
                 });
             }
         }
-        public VMItems() =>
-            Items = Context.ItemsContext.AllItems();
+        public VMItems()
+        {
+            //Items = Context.ItemsContext.AllItems();
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {

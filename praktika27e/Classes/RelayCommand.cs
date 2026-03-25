@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 
 namespace praktika27e.Classes
@@ -24,6 +22,6 @@ namespace praktika27e.Classes
             return this.canExecute == null || this.CanExecute(parameter);
         }
         public void Execute(object parameter) =>
-            this.CanExecute(parameter);
+            this.execute(parameter);
     }
 }

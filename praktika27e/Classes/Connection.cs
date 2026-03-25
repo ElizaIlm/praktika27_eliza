@@ -7,11 +7,7 @@ namespace praktika27e.Classes
 {
     public class Connection
     {
-        private static readonly string config = "server=;" +
-            "Trusted_Connection=No;" +
-            "DataBase=ShopContent;" +
-            "User= ;" +
-            "PWD= ;";
+        private static readonly string config = @"server=(localdb)\MSSQLLocalDB;Trusted_Connection=True;DataBase=ShopContent;";
         public static SqlConnection OpenConnection()
         {
             SqlConnection connection = new SqlConnection(config);

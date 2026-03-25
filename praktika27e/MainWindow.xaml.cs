@@ -20,15 +20,14 @@ namespace praktika27e
     /// </summary>
     public partial class MainWindow : Window
     {
+        // <summary> Ссылка на главное окно
         public static MainWindow init;
-        public View.Main Main = new View.Main();
-        public MainWindow()
+
+    public MainWindow()
         {
             InitializeComponent();
-            init = this;
-            frame.Navigate(Main);
+            init = this; // Запоминаем главное окно
+            DataContext = new VM_Pages(); // в качестве
         }
-        private void OpenIndex(object sender, MouseButtonEventArgs e) =>
-            frame.Navigate(Main);
     }
 }
